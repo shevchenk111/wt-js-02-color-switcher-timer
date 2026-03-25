@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.timer {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.timer div {
+  text-align: center;
+}
