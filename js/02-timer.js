@@ -1,6 +1,3 @@
-import flatpickr from 'flatpickr';
-import 'flatpickr/dist/flatpickr.min.css';
-
 const input = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('[data-start]');
 const daysEl = document.querySelector('[data-days]');
@@ -42,15 +39,11 @@ startBtn.addEventListener('click', () => {
   input.disabled = true;
 
   timerId = setInterval(() => {
-    const currentTime = Date.now();
-    const timeLeft = selectedDate - currentTime;
+    const timeLeft = selectedDate - Date.now();
 
     if (timeLeft <= 0) {
       clearInterval(timerId);
-      timerId = null;
-
       updateTimer(0, 0, 0, 0);
-      input.disabled = false;
       return;
     }
 
