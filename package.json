@@ -1,0 +1,18 @@
+{
+  "name": "wt-js-02-color-switcher-timer",
+  "version": "1.0.0",
+  "homepage": "https://shevchenk111.github.io/wt-js-02-color-switcher-timer/",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /wt-js-02-color-switcher-timer/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "dependencies": {
+    "flatpickr": "^4.6.13"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "parcel": "^2.6.0"
+  }
+}
