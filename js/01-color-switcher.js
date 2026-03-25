@@ -13,7 +13,7 @@ function getRandomHexColor() {
 }
 
 startBtn.addEventListener('click', () => {
-  if (timerId) {
+  if (timerId !== null) {
     return;
   }
 
