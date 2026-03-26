@@ -38,6 +38,8 @@ startBtn.addEventListener('click', () => {
   startBtn.disabled = true;
   input.disabled = true;
 
+  updateTimerValue(selectedDate - Date.now());
+
   timerId = setInterval(() => {
     const timeLeft = selectedDate - Date.now();
 
@@ -47,10 +49,14 @@ startBtn.addEventListener('click', () => {
       return;
     }
 
-    const { days, hours, minutes, seconds } = convertMs(timeLeft);
-    updateTimer(days, hours, minutes, seconds);
+    updateTimerValue(timeLeft);
   }, 1000);
 });
+
+function updateTimerValue(ms) {
+  const { days, hours, minutes, seconds } = convertMs(ms);
+  updateTimer(days, hours, minutes, seconds);
+}
 
 function convertMs(ms) {
   const second = 1000;
